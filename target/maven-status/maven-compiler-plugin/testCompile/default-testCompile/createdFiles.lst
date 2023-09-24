@@ -1,3 +1,11 @@
 restassuredApiTests/RestUtils.class
+restassuredApiTests/GetBookingIds.class
+restassuredApiTests/DeleteBooking.class
+restassuredApiTests/GetBookingsByName.class
+restassuredApiTests/HealthCheck.class
 restassuredApiTests/CreateBooking.class
+restassuredApiTests/UpdateBooking.class
+restassuredApiTests/GetBookingsByCheckinCheckout.class
+restassuredApiTests/GetBooking.class
+restassuredApiTests/PartialUpdateBooking.class
 restassuredApiTests/CreateToken.class

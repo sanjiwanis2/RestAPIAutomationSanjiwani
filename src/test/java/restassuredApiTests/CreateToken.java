@@ -3,26 +3,16 @@ package restassuredApiTests;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.Assert;
-import org.testng.annotations.*;
-
 import io.restassured.RestAssured;
-import io.restassured.matcher.ResponseAwareMatcher;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
-
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matcher.*;
-
 import java.util.HashMap;
 
 
 public class CreateToken {
 	
-	
-	public static HashMap map=new HashMap();
+	static String token ; 
+	static Response response ;
+	public static HashMap<String, String> map=new HashMap<String, String>();
 	
 	@BeforeClass
 	public void postdata()
@@ -32,39 +22,27 @@ public class CreateToken {
 		
 		RestAssured.baseURI= RestUtils.getBaseURI();
 		RestAssured.basePath="/auth" ;
-
 	}
-	Response response ;
-	@Test
-	public void testpost()
+	
+	@Test  	
+	public void  testpost()
 	{
-		
-		
-		response = 
-		given()
-			.contentType("application/json")
-			.body(map)
-		
-		.when()
-			.post()
-		
-		.then()
-			.statusCode(200)
-			.and()
-			.statusLine("HTTP/1.1 200 OK")
-			.log().all() 
-			.extract().response();
-			
-			
+	response = 
+			RestAssured 
+			.given()
+				.contentType("application/json")
+				.body(map)
+				//.log().all()
+			.when()
+				.post()
+			.then()
+				.statusCode(200)
+				.statusLine("HTTP/1.1 200 OK")
+				//.log().all() 
+				.extract().response();
+			AssertJUnit.assertTrue(response.getBody().asString().contains("token")); // Verify Response has token field 
+	token  = response.jsonPath().get("token"); //Storing token to pass onto other methods
+		 
 	}
 	
-	@Test
-	public void testresponsevalidations()
-	{
-		AssertJUnit.assertTrue(response.getBody().asString().contains("token"));
-
-	}
-	
-	
-
 }

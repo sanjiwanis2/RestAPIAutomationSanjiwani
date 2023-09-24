@@ -2,12 +2,7 @@ package restassuredApiTests;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-
 import org.apache.commons.lang3.RandomStringUtils;
-
-import io.restassured.matcher.ResponseAwareMatcher;
-import io.restassured.response.Response;
-
 import java.util.Random;   
 
 public class RestUtils {

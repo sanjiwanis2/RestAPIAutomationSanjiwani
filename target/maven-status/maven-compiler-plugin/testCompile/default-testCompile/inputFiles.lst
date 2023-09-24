@@ -1,3 +1,11 @@
+/Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/PartialUpdateBooking.java
 /Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/CreateToken.java
+/Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/GetBookingIds.java
 /Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/RestUtils.java
+/Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/UpdateBooking.java
+/Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/GetBookingsByCheckinCheckout.java
+/Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/DeleteBooking.java
+/Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/GetBookingsByName.java
+/Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/HealthCheck.java
 /Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/CreateBooking.java
+/Users/sanjiwanisuryawanshi/eclipse-workspace/RestAssuredAPITesting_BDD_Approach/src/test/java/restassuredApiTests/GetBooking.java
