@@ -2,11 +2,13 @@ package restassuredApiTests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.util.HashMap;
 import java.util.Map;
 import org.hamcrest.Matchers;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -78,13 +80,13 @@ public class PartialUpdateBooking {
 			}
 	
 		// POST REQUEST : CREATE TOKEN 
-		@Test(priority=0)  
+		@Test(priority=0 , description = "Create Token")
 		public void  Createtoken()
 		{
 			//System.out.println("\n In 0 priority\t ");
 			response = 
 			RestAssured 
-				.given()
+				.given().filter(new AllureRestAssured())
 					.contentType("application/json")
 					.body(tokenbody)
 					.basePath("/auth")
@@ -99,15 +101,14 @@ public class PartialUpdateBooking {
 		}
 		
 		
-		// POST REQUEST : CREATE BOOKING 
-		@Test(priority=1)
+		@Test(priority=1 , description = "Create Booking")
 		public void Createbooking()
 		{
 		//	System.out.println("In 1 priority\n");
 
 			 response =
 					RestAssured
-						.given()
+						.given().filter(new AllureRestAssured())
 								.contentType(ContentType.JSON)
 								.body(map)	
 								.basePath("/booking")
@@ -127,7 +128,7 @@ public class PartialUpdateBooking {
 		
 		
 		// PATCH REQUEST : UPDATE BOOKING - ALL FIELDS 
-		@Test(priority=2)
+		@Test(priority=2 , description = "Update Booking All Fileds")
 		public void UpdateAllFields()
 		{
 			
@@ -137,7 +138,7 @@ public class PartialUpdateBooking {
 			
 			response =
 					RestAssured
-						.given()
+						.given().filter(new AllureRestAssured())
 								.contentType(ContentType.JSON)
 								.accept("application/json")
 								.header("Cookie", token1)
@@ -165,7 +166,7 @@ public class PartialUpdateBooking {
 		
 		public String updatefirstname;
 		
-		@Test(priority=3)
+		@Test(priority=3 , description = "UPDATE BOOKING - ONLY FIRSTNAME")
 		public void UpdateOnlyFirstName()
 		{
 			  updatefirstname = RestUtils.getFirstName();
@@ -175,7 +176,7 @@ public class PartialUpdateBooking {
 			String token1 = "token=" + token ;
 			 response =
 					RestAssured
-						.given()
+						.given().filter(new AllureRestAssured())
 								.contentType(ContentType.JSON)
 								.accept("application/json")
 								.header("Cookie", token1)
@@ -202,7 +203,7 @@ public class PartialUpdateBooking {
 		}
 		
 		// PATCH REQUEST : UPDATE BOOKING - ONLY LASTNAME
-		@Test(priority=3)
+		@Test(priority=3 , description = "UPDATE BOOKING - ONLY LASTNAME")
 		public void UpdateOnlyLastName()
 		{
 			String updatelastname = RestUtils.getLastName();
@@ -212,7 +213,7 @@ public class PartialUpdateBooking {
 			String token1 = "token=" + token ;
 			 response =
 					RestAssured
-						.given()
+						.given().filter(new AllureRestAssured())
 								.contentType(ContentType.JSON)
 								.accept("application/json")
 								.header("Cookie", token1)

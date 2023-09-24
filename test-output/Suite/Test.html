@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Sep 23 19:20:05 IST 2023</td>
+<td>Started on:</td><td>Sun Sep 24 17:36:25 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9342 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45514 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,24 +67,209 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='restassuredApiTests.getbooking_id.testpost()'><b>testpost</b><br>Test class: restassuredApiTests.getbooking_id</td>
-<td></td>
-<td>4</td>
-<td>restassuredApiTests.getbooking_id@1139b2f3</td></tr>
+<td title='restassuredApiTests.GetBookingsByName.getBookingsForName()'><b>getBookingsForName</b><br>Test class: restassuredApiTests.GetBookingsByName<br>Test method: GET REQUEST : GET BOOKINGS BY FIRSTNAME & LASTNAME</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path bookingid[0] doesn&apos;t match.
+Expected: &lt;2099&gt;
+  Actual: &lt;2026&gt;
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$2.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at restassuredApiTests.GetBookingsByName.getBookingsForName(GetBookingsByName.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1747085016", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1747085016'><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path bookingid[0] doesn&apos;t match.
+Expected: &lt;2099&gt;
+  Actual: &lt;2026&gt;
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$2.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at restassuredApiTests.GetBookingsByName.getBookingsForName(GetBookingsByName.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>restassuredApiTests.GetBookingsByName@534a5a98</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='restassuredApiTests.getbooking_id.testget()'><b>testget</b><br>Test class: restassuredApiTests.getbooking_id</td>
+<td title='restassuredApiTests.GetBookingsByCheckinCheckout.getBookingsForCheckinCheckout()'><b>getBookingsForCheckinCheckout</b><br>Test class: restassuredApiTests.GetBookingsByCheckinCheckout<br>Test method: GET REQUEST : GET BOOKINGS BY FILTER CHECKIN & CHECKOUT  DATE</td>
 <td></td>
-<td>4</td>
-<td>restassuredApiTests.getbooking_id@1139b2f3</td></tr>
+<td>1</td>
+<td>restassuredApiTests.GetBookingsByCheckinCheckout@3527942a</td></tr>
+<tr>
+<td title='restassuredApiTests.PartialUpdateBooking.UpdateOnlyLastName()'><b>UpdateOnlyLastName</b><br>Test class: restassuredApiTests.PartialUpdateBooking<br>Test method: UPDATE BOOKING - ONLY LASTNAME</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.PartialUpdateBooking@121314f7</td></tr>
+<tr>
+<td title='restassuredApiTests.UpdateBooking.Createbooking()'><b>Createbooking</b><br>Test class: restassuredApiTests.UpdateBooking<br>Test method: CREATE BOOKING</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.UpdateBooking@130c12b7</td></tr>
+<tr>
+<td title='restassuredApiTests.UpdateBooking.Createtoken()'><b>Createtoken</b><br>Test class: restassuredApiTests.UpdateBooking<br>Test method: CREATE TOKEN</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.UpdateBooking@130c12b7</td></tr>
+<tr>
+<td title='restassuredApiTests.DeleteBooking.Deletebooking()'><b>Deletebooking</b><br>Test class: restassuredApiTests.DeleteBooking</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.DeleteBooking@273e7444</td></tr>
+<tr>
+<td title='restassuredApiTests.GetBookingsByName.testpost()'><b>testpost</b><br>Test class: restassuredApiTests.GetBookingsByName</td>
+<td></td>
+<td>2</td>
+<td>restassuredApiTests.GetBookingsByName@534a5a98</td></tr>
+<tr>
+<td title='restassuredApiTests.DeleteBooking.Getdeletedbooking()'><b>Getdeletedbooking</b><br>Test class: restassuredApiTests.DeleteBooking</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.DeleteBooking@273e7444</td></tr>
+<tr>
+<td title='restassuredApiTests.GetBookingIds.getAllBookings()'><b>getAllBookings</b><br>Test class: restassuredApiTests.GetBookingIds<br>Test method: GET : Get Booking Ids</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.GetBookingIds@5a45133e</td></tr>
+<tr>
+<td title='restassuredApiTests.PartialUpdateBooking.UpdateAllFields()'><b>UpdateAllFields</b><br>Test class: restassuredApiTests.PartialUpdateBooking<br>Test method: Update Booking All Fileds</td>
+<td></td>
+<td>2</td>
+<td>restassuredApiTests.PartialUpdateBooking@121314f7</td></tr>
+<tr>
+<td title='restassuredApiTests.CreateToken.testpost()'><b>testpost</b><br>Test class: restassuredApiTests.CreateToken<br>Test method: POST : Create Token</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.CreateToken@1ed6388a</td></tr>
+<tr>
+<td title='restassuredApiTests.CreateBooking.testpost()'><b>testpost</b><br>Test class: restassuredApiTests.CreateBooking</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.CreateBooking@60bd273d</td></tr>
+<tr>
+<td title='restassuredApiTests.GetBookingsByCheckinCheckout.testpost()'><b>testpost</b><br>Test class: restassuredApiTests.GetBookingsByCheckinCheckout</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.GetBookingsByCheckinCheckout@3527942a</td></tr>
+<tr>
+<td title='restassuredApiTests.PartialUpdateBooking.UpdateOnlyFirstName()'><b>UpdateOnlyFirstName</b><br>Test class: restassuredApiTests.PartialUpdateBooking<br>Test method: UPDATE BOOKING - ONLY FIRSTNAME</td>
+<td></td>
+<td>2</td>
+<td>restassuredApiTests.PartialUpdateBooking@121314f7</td></tr>
+<tr>
+<td title='restassuredApiTests.DeleteBooking.Createbooking()'><b>Createbooking</b><br>Test class: restassuredApiTests.DeleteBooking</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.DeleteBooking@273e7444</td></tr>
+<tr>
+<td title='restassuredApiTests.DeleteBooking.Createtoken()'><b>Createtoken</b><br>Test class: restassuredApiTests.DeleteBooking</td>
+<td></td>
+<td>5</td>
+<td>restassuredApiTests.DeleteBooking@273e7444</td></tr>
+<tr>
+<td title='restassuredApiTests.PartialUpdateBooking.Createtoken()'><b>Createtoken</b><br>Test class: restassuredApiTests.PartialUpdateBooking<br>Test method: Create Token</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.PartialUpdateBooking@121314f7</td></tr>
+<tr>
+<td title='restassuredApiTests.PartialUpdateBooking.Createbooking()'><b>Createbooking</b><br>Test class: restassuredApiTests.PartialUpdateBooking<br>Test method: Create Booking</td>
+<td></td>
+<td>2</td>
+<td>restassuredApiTests.PartialUpdateBooking@121314f7</td></tr>
+<tr>
+<td title='restassuredApiTests.UpdateBooking.Updatebooking()'><b>Updatebooking</b><br>Test class: restassuredApiTests.UpdateBooking<br>Test method: UPDATE BOOKING</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.UpdateBooking@130c12b7</td></tr>
+<tr>
+<td title='restassuredApiTests.GetBooking.testpost()'><b>testpost</b><br>Test class: restassuredApiTests.GetBooking</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.GetBooking@942a29c</td></tr>
+<tr>
+<td title='restassuredApiTests.GetBooking.testget()'><b>testget</b><br>Test class: restassuredApiTests.GetBooking<br>Test method: GET : Get Booking</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.GetBooking@942a29c</td></tr>
+<tr>
+<td title='restassuredApiTests.HealthCheck.getping()'><b>getping</b><br>Test class: restassuredApiTests.HealthCheck<br>Test method: GET HEALTH CHECK : PING</td>
+<td></td>
+<td>1</td>
+<td>restassuredApiTests.HealthCheck@4f80542f</td></tr>
 </table><p>
 </body>
 </html>

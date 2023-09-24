@@ -2,9 +2,13 @@ package restassuredApiTests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.util.HashMap;
 import java.util.Map;
 import org.hamcrest.Matchers;
+
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -76,15 +80,16 @@ public class UpdateBooking {
 			RestAssured.baseURI= RestUtils.getBaseURI();
 			
 			}
-		// POST REQUEST : CREATE TOKEN 
-		@Test(priority=0) 
+		
+		
+		@Test(priority=0  , description = "CREATE TOKEN")
 		// Generate AUTH Token 
 		public void  Createtoken()
 		{
 			// System.out.println("\n In 0 priority\t ");
 			response = 
 					RestAssured 
-			.given()
+			.given().filter(new AllureRestAssured())
 				.contentType("application/json")
 				.body(tokenbody)
 				.basePath("/auth")
@@ -102,15 +107,14 @@ public class UpdateBooking {
 		}
 		
 		
-		// POST REQUEST : CREATE BOOKING 
-		@Test(priority=1)
+		@Test(priority=1 , description = "CREATE BOOKING")
 		public void Createbooking()
 		{
 		//	System.out.println("In 1 priority\n");
 
 			 response =
 					RestAssured
-						.given()
+						.given().filter(new AllureRestAssured())
 								.contentType(ContentType.JSON)
 								.body(map)	
 								.basePath("/booking")
@@ -129,8 +133,7 @@ public class UpdateBooking {
 			
 		
 		
-		// PUT REQUEST : UPDATE BOOKING 
-		@Test(priority=2)
+		@Test(priority=2 , description = "UPDATE BOOKING")
 		public void Updatebooking()
 		{
 			
@@ -139,7 +142,7 @@ public class UpdateBooking {
 			//System.out.println("token=" + token );
 			response =
 					RestAssured
-						.given()
+						.given().filter(new AllureRestAssured())
 								.contentType(ContentType.JSON)
 								.accept("application/json")
 								.header("Cookie", token1)

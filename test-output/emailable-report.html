@@ -8,11 +8,55 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4,027</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">21</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">45,514</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">restassuredApiTests.HealthCheck</td><td><a href="#m0">getping</a></td><td rowspan="1">1695535316529</td><td rowspan="1">3967</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">restassuredApiTests.GetBookingsByName</td><td><a href="#m0">getBookingsForName</a></td><td rowspan="1">1695557209198</td><td rowspan="1">1657</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">restassuredApiTests.CreateBooking</td><td><a href="#m1">testpost</a></td><td rowspan="1">1695557212407</td><td rowspan="1">1677</td></tr><tr class="passedodd"><td rowspan="1">restassuredApiTests.CreateToken</td><td><a href="#m2">testpost</a></td><td rowspan="1">1695557203544</td><td rowspan="1">1658</td></tr><tr class="passedeven"><td rowspan="4">restassuredApiTests.DeleteBooking</td><td><a href="#m3">Createbooking</a></td><td rowspan="1">1695557191345</td><td rowspan="1">1758</td></tr><tr class="passedeven"><td><a href="#m4">Createtoken</a></td><td rowspan="1">1695557186239</td><td rowspan="1">5020</td></tr><tr class="passedeven"><td><a href="#m5">Deletebooking</a></td><td rowspan="1">1695557193126</td><td rowspan="1">1626</td></tr><tr class="passedeven"><td><a href="#m6">Getdeletedbooking</a></td><td rowspan="1">1695557194787</td><td rowspan="1">1507</td></tr><tr class="passedodd"><td rowspan="2">restassuredApiTests.GetBooking</td><td><a href="#m7">testget</a></td><td rowspan="1">1695557201481</td><td rowspan="1">1869</td></tr><tr class="passedodd"><td><a href="#m8">testpost</a></td><td rowspan="1">1695557199599</td><td rowspan="1">1847</td></tr><tr class="passedeven"><td rowspan="1">restassuredApiTests.GetBookingIds</td><td><a href="#m9">getAllBookings</a></td><td rowspan="1">1695557205217</td><td rowspan="1">1801</td></tr><tr class="passedodd"><td rowspan="2">restassuredApiTests.GetBookingsByCheckinCheckout</td><td><a href="#m10">getBookingsForCheckinCheckout</a></td><td rowspan="1">1695557197971</td><td rowspan="1">1624</td></tr><tr class="passedodd"><td><a href="#m11">testpost</a></td><td rowspan="1">1695557196300</td><td rowspan="1">1651</td></tr><tr class="passedeven"><td rowspan="1">restassuredApiTests.GetBookingsByName</td><td><a href="#m12">testpost</a></td><td rowspan="1">1695557207027</td><td rowspan="1">2057</td></tr><tr class="passedodd"><td rowspan="1">restassuredApiTests.HealthCheck</td><td><a href="#m13">getping</a></td><td rowspan="1">1695557210863</td><td rowspan="1">1536</td></tr><tr class="passedeven"><td rowspan="5">restassuredApiTests.PartialUpdateBooking</td><td><a href="#m14">Createbooking</a></td><td rowspan="1">1695557215852</td><td rowspan="1">2039</td></tr><tr class="passedeven"><td><a href="#m15">Createtoken</a></td><td rowspan="1">1695557214089</td><td rowspan="1">1755</td></tr><tr class="passedeven"><td><a href="#m16">UpdateAllFields</a></td><td rowspan="1">1695557217898</td><td rowspan="1">2539</td></tr><tr class="passedeven"><td><a href="#m17">UpdateOnlyFirstName</a></td><td rowspan="1">1695557220487</td><td rowspan="1">2866</td></tr><tr class="passedeven"><td><a href="#m18">UpdateOnlyLastName</a></td><td rowspan="1">1695557223485</td><td rowspan="1">1906</td></tr><tr class="passedodd"><td rowspan="3">restassuredApiTests.UpdateBooking</td><td><a href="#m19">Createbooking</a></td><td rowspan="1">1695557227116</td><td rowspan="1">1888</td></tr><tr class="passedodd"><td><a href="#m20">Createtoken</a></td><td rowspan="1">1695557225480</td><td rowspan="1">1570</td></tr><tr class="passedodd"><td><a href="#m21">Updatebooking</a></td><td rowspan="1">1695557229085</td><td rowspan="1">1882</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">restassuredApiTests.HealthCheck#getping</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">restassuredApiTests.GetBookingsByName#getBookingsForName</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+JSON path bookingid[0] doesn&apos;t match.
+Expected: &lt;2099&gt;
+  Actual: &lt;2026&gt;
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$2.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at restassuredApiTests.GetBookingsByName.getBookingsForName(GetBookingsByName.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">restassuredApiTests.CreateBooking#testpost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">restassuredApiTests.CreateToken#testpost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">restassuredApiTests.DeleteBooking#Createbooking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">restassuredApiTests.DeleteBooking#Createtoken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">restassuredApiTests.DeleteBooking#Deletebooking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">restassuredApiTests.DeleteBooking#Getdeletedbooking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">restassuredApiTests.GetBooking#testget</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">restassuredApiTests.GetBooking#testpost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">restassuredApiTests.GetBookingIds#getAllBookings</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">restassuredApiTests.GetBookingsByCheckinCheckout#getBookingsForCheckinCheckout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">restassuredApiTests.GetBookingsByCheckinCheckout#testpost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">restassuredApiTests.GetBookingsByName#testpost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">restassuredApiTests.HealthCheck#getping</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">restassuredApiTests.PartialUpdateBooking#Createbooking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">restassuredApiTests.PartialUpdateBooking#Createtoken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">restassuredApiTests.PartialUpdateBooking#UpdateAllFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">restassuredApiTests.PartialUpdateBooking#UpdateOnlyFirstName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">restassuredApiTests.PartialUpdateBooking#UpdateOnlyLastName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">restassuredApiTests.UpdateBooking#Createbooking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">restassuredApiTests.UpdateBooking#Createtoken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">restassuredApiTests.UpdateBooking#Updatebooking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

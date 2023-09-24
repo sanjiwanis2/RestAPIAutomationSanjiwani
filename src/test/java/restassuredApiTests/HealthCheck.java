@@ -1,16 +1,18 @@
 package restassuredApiTests;
 
 import org.testng.annotations.Test;
-import io.restassured.RestAssured;
 import org.testng.annotations.Test;
+
+import io.qameta.allure.restassured.AllureRestAssured;
+import io.restassured.RestAssured;
 
 public class HealthCheck {
 	
-	@Test
+	@Test(description = "GET HEALTH CHECK : PING")
 	public void getping()
 	{
 		RestAssured 
-			.given()
+			.given().filter(new AllureRestAssured())
 				.baseUri(RestUtils.getBaseURI())
 				.basePath("ping")
 			.when()

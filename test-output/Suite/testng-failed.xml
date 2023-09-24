@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="restassuredApiTests.CreateBooking">
+      <class name="restassuredApiTests.GetBookingsByName">
         <methods>
-          <include name="validateResponseData"/>
           <include name="postdata"/>
+          <include name="getBookingsForName"/>
         </methods>
-      </class> <!-- restassuredApiTests.CreateBooking -->
+      </class> <!-- restassuredApiTests.GetBookingsByName -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

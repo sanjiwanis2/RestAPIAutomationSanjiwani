@@ -1,17 +1,19 @@
 package restassuredApiTests;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.hamcrest.Matchers;
+
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 
 public class GetBookingsByName extends CreateBooking{
 
-	@Test
+	@Test(description="GET REQUEST : GET BOOKINGS BY FIRSTNAME & LASTNAME")
 	public void getBookingsForName()
 	{
-		// GET REQUEST : GET BOOKINGS BY FIRSTNAME & LASTNAME
 		RestAssured 
-				.given()
+				.given().filter(new AllureRestAssured())
 					.accept("application/json")
 					.baseUri(RestUtils.getBaseURI())
 					.basePath("/booking")

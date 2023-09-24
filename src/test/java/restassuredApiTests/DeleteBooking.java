@@ -2,10 +2,15 @@ package restassuredApiTests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.util.HashMap;
 import java.util.Map;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -33,7 +38,7 @@ public class DeleteBooking {
 	
 	
 	
-	@BeforeClass 
+	@BeforeClass
 	public void postdata()
 	{		
 		// Request Body for CreateBooking 
@@ -58,15 +63,16 @@ public class DeleteBooking {
 		
 		}
 	
-	// POST REQUEST : CREATE TOKEN 
+	
 	@Test(priority=0) 
+	@Description("POST REQUEST : CREATE TOKEN ")
 	// Generate AUTH Token 
 	public void  Createtoken()
 	{
 		// System.out.println("\n In 0 priority\t ");
 		response = 
 				RestAssured 
-		.given()
+		.given().filter(new AllureRestAssured())
 			.contentType("application/json")
 			.body(tokenbody)
 			.basePath("/auth")
@@ -82,17 +88,16 @@ public class DeleteBooking {
 		 
 		// System.out.println("token is " + token + "\n");
 	}
-	
-	
-	// POST REQUEST : CREATE BOOKING 
+
 	@Test(priority=1)
+	@Description("POST REQUEST : CREATE BOOKING  ")
 	public void Createbooking()
 	{
 	//	System.out.println("In 1 priority\n");
 
 		 response =
 				RestAssured
-					.given()
+					.given().filter(new AllureRestAssured())
 							.contentType(ContentType.JSON)
 							.body(map)	
 							.basePath("/booking")
@@ -108,9 +113,9 @@ public class DeleteBooking {
 			bookingid = response.jsonPath().get("bookingid");	// Save Booking Id to pass on to PUT request 
 			// System.out.println("Booking id is\n" +bookingid );
 	}
-	
-	// DELETE REQUEST : DELETE BOOKING
+	 
 	@Test(priority=2)	
+	@Description("DELETE REQUEST : DELETE BOOKING")
 	public void Deletebooking()
 	{
 		String username = RestUtils.getUserName();
@@ -119,7 +124,7 @@ public class DeleteBooking {
 		// System.out.println("entered delete booking");
 		
 				 RestAssured
-					.given()
+					.given().filter(new AllureRestAssured())
 						.auth().preemptive().basic(username, password)
 							.contentType("application/json")
 							 .basePath("/booking")
@@ -133,13 +138,13 @@ public class DeleteBooking {
 						    
 	}
 	
-	// GET REQUEST : VERIFY IF THE BOOKING IS DELETED 
 	@Test(priority=3)	
+	@Description("GET REQUEST : VERIFY IF THE BOOKING IS DELETED")
 	public void Getdeletedbooking()
 	{
 		response =
 				RestAssured
-					.given()
+					.given().filter(new AllureRestAssured())
 							.basePath("/booking")
 							//.log().all()
 						.when()
@@ -150,10 +155,4 @@ public class DeleteBooking {
 						    .extract()
 							.response();
 	}
-	
-	
-	
-	
-	
-
 }

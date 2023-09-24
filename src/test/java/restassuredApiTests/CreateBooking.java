@@ -2,7 +2,13 @@ package restassuredApiTests;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import org.hamcrest.Matchers;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -25,7 +31,7 @@ public class CreateBooking {
 	// Create HASHMAP for storing POST request body data 
 	 public static HashMap<String, Object> map=new HashMap<String, Object>();
 	 
-		@BeforeClass
+	@BeforeClass
 	public void postdata()
 	{
 			// Request Body for CreateBooking 
@@ -43,14 +49,15 @@ public class CreateBooking {
 		RestAssured.baseURI= RestUtils.getBaseURI();
 		RestAssured.basePath="/booking" ;
 	}
-	@Test(priority=0)
+	@Test(priority=0) 
+	@Description("POST : Create Booking")
 	public  void testpost()
 	{
 		//System.out.print("inpostclass"+bookingid);
 		
 		Response response =
 				RestAssured
-					.given()
+					.given().filter(new AllureRestAssured())
 							.contentType(ContentType.JSON)
 							.accept("application/json")
 							.body(map)	

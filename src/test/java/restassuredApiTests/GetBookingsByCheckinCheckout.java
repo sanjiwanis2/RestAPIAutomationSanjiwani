@@ -1,17 +1,18 @@
 package restassuredApiTests;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 
 public class GetBookingsByCheckinCheckout extends CreateBooking{
 	
-	@Test
+	@Test(description="GET REQUEST : GET BOOKINGS BY FILTER CHECKIN & CHECKOUT  DATE")
 	public void getBookingsForCheckinCheckout()
 	{		
-		// GET REQUEST : GET BOOKINGS BY FILTER CHECKIN & CHECKOUT  DATE
-		 
 			RestAssured 
-				.given()
+				.given().filter(new AllureRestAssured())
 					.accept("application/json")
 					.baseUri(RestUtils.getBaseURI())
 					.basePath("/booking")
@@ -22,26 +23,8 @@ public class GetBookingsByCheckinCheckout extends CreateBooking{
 					.get()
 				.then()
 					.statusCode(200)
-					.statusLine("HTTP/1.1 200 OK")
-					.log().body();
-					// .body("bookingid[0]",Matchers.equalTo(bookingid)) This assertion is failing sometimes because Get by checkincheout call is not returning data for long period 
-					
-		
-		// DELETE REQUEST : TO DELETE CREATED BOOKING 
-		  /* RestAssured        
-				.given()
-					.accept("application/json")
-					.baseUri(RestUtils.getBaseURI())
-					.basePath("/booking")
-					.param("/bookingid", bookingid)
-					.log().all()
-				.when()
-					.delete()
-				.then()
-					.statusCode(201)
-					.statusLine("HTTP/1.1 201 Created")
-					.extract().response();
-			*/ 
+					.statusLine("HTTP/1.1 200 OK");
+					// .log().body();
 }
 	
 }
