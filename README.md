@@ -11,6 +11,7 @@ Please refer below diagram for brief information regarding API Automation Framew
 - Install Java
 - Install Maven
 - Download Allure Reports
+- Eclipse IDE 
 
 # Project Run
 - Clone repository https://github.com/sanjiwanis2/RestAPIAutomation in your local system.
@@ -18,7 +19,7 @@ Please refer below diagram for brief information regarding API Automation Framew
 
   ## Command to Run automation script 
   ```
-  mvn clean test -D"suitefilename"="./suites/${testrunfile}" 
+  mvn clean test -Dsuitefilename="./suites/${testrunfile}" 
   ```
   Put test runner file name in place of ${testrunfile} in command. For ex. mvn clean test -Dsuitefilename="./suites/alltests.xml"
   
@@ -29,7 +30,7 @@ Please refer below diagram for brief information regarding API Automation Framew
 
 # Jenkins Integration
 
-- Freestyle Pipeline job is created on Jenkins local host sevrer which is configured to clone source code from github repository , parameterise to choose which runner file to execute , generate allure report after build run. Currenly Job is triggered manually using Build with Parameters option.
+- Freestyle Pipeline job is created on Jenkins local host sevrer which is configured to clone source code from github repository , parameterised to choose which runner file to execute , generate allure report after build run. Currenly Job is triggered manually using Build with Parameters option.
 - Following are some images of Jenkins Job Pipeline View and Configuration
 - Pipeline JOB :
     <img width="1010" alt="Screenshot 2023-09-25 at 10 22 00 AM" src="https://github.com/sanjiwanis2/RestAPIAutomationSanjiwani/assets/112940142/6c888567-3141-47c2-b29e-c64e362ab8dd">
@@ -47,15 +48,12 @@ Please refer below diagram for brief information regarding API Automation Framew
 - Open Source and free to use tools
 - Setup is easy and straight forward
 - Easily Integrated with testing framework
+- Code is more readable as it used BDD approach.
 
 # Disadvantages of framework 
 - Requires good java programming language knowledge
 - No inbuilt reporting mechanism
 - It doesn't support testing of SOAP APIs
-
-# Improvement to be done in current Framework 
-- Code can be optimised
-- Design of framework can be improved
 
 # Future Enhancements 
 - Integrate with Docker
