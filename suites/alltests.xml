@@ -3,16 +3,15 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="restassuredApiTests.DeleteBooking"/>
-      <class name="restassuredApiTests.GetBookingsByCheckinCheckout"/>
-      <class name="restassuredApiTests.GetBooking"/>
-      <class name="restassuredApiTests.CreateToken"/>
-      <class name="restassuredApiTests.GetBookingIds"/>
-      <class name="restassuredApiTests.GetBookingsByName"/>
-      <class name="restassuredApiTests.HealthCheck"/>
-      <class name="restassuredApiTests.CreateBooking"/>
-      <class name="restassuredApiTests.PartialUpdateBooking"/>
-      <class name="restassuredApiTests.UpdateBooking"/>
+      <class name="restAssuredApiTest.GetBookingsByName"/>
+      <class name="restAssuredApiTest.GetBookingIds"/>
+      <class name="restAssuredApiTest.PartialUpdateBooking"/>
+      <class name="restAssuredApiTest.CreateToken"/>
+      <class name="restAssuredApiTest.DeleteBooking"/>
+      <class name="restAssuredApiTest.CreateBooking"/>
+      <class name="restAssuredApiTest.GetBooking"/>
+      <class name="restAssuredApiTest.UpdateBooking"/>
+      <class name="restAssuredApiTest.GetBookingsByCheckinCheckout"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

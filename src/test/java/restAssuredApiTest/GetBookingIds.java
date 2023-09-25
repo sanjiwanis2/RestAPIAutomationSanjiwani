@@ -1,33 +1,30 @@
-package restassuredApiTests;
+package restAssuredApiTest;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
-import org.hamcrest.Matchers;
-
+import org.testng.AssertJUnit;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
 
-public class GetBookingsByName extends CreateBooking{
+public class GetBookingIds {
 
-	@Test(description="GET REQUEST : GET BOOKINGS BY FIRSTNAME & LASTNAME")
-	public void getBookingsForName()
+	@Test(description="GET : Get Booking Ids")
+	public void getAllBookings()
 	{
+	Response response = 
 		RestAssured 
 				.given().filter(new AllureRestAssured())
 					.accept("application/json")
 					.baseUri(RestUtils.getBaseURI())
 					.basePath("/booking")
-					.param("firstname",firstname)
-					.param("lastname", lastname)
-					//.log().all()
 				.when()
 					.get()
 				.then()
 					.statusCode(200)
 					.statusLine("HTTP/1.1 200 OK")
-					.log().body()
-					.body("bookingid[0]",Matchers.equalTo(bookingid))
 					.extract().response();
-
-}
+		AssertJUnit.assertTrue(response.getBody().asString().contains("bookingid"));
 	}
+}

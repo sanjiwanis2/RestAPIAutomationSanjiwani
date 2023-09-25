@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="restAssuredApiTest.CreateToken"/>
+      <class name="restassuredApiTests.GetBookingsByCheckinCheckout"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

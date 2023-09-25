@@ -3,7 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="restassuredApiTests.DeleteBooking"/>
+      <class name="restAssuredApiTest.CreateBooking"/>
+      <class name="restAssuredApiTest.CreateToken"/>
+      <class name="restAssuredApiTest.DeleteBooking"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

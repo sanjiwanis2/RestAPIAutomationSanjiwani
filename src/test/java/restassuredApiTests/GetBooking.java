@@ -1,9 +1,7 @@
 package restassuredApiTests;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 import org.hamcrest.Matchers;
-
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 
@@ -17,7 +15,7 @@ public class GetBooking extends CreateBooking{
 						.accept("application/json")
 						.baseUri(RestUtils.getBaseURI())
 					.when()
-						.get("/{id}", bookingid)
+						.get("/{id}",bookingid)
 				.then()
 						//.log().body()
 						.statusCode(200)
